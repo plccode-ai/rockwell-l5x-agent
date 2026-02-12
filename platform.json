@@ -1,0 +1,40 @@
+{
+  "id": "rockwell-l5x",
+  "name": "Rockwell ControlLogix / CompactLogix",
+  "shortName": "Rockwell",
+  "version": "1.0.0",
+  "fileExtensions": [".L5X", ".L5K"],
+  "languages": ["ladder-logic", "structured-text", "function-block", "sfc"],
+  "defaultLanguage": "ladder-logic",
+  "agents": {
+    "systemPrompt": "agents/system-prompt.md",
+    "modes": "agents/modes.md",
+    "classifier": "agents/classifier/prompt.md",
+    "router": "agents/router/config.json",
+    "agentModifiers": {
+      "planner": "agents/planner/prompt.md",
+      "executor": "agents/executor/prompt.md",
+      "reviewer": "agents/reviewer/prompt.md",
+      "clarifier": "agents/clarifier/prompt.md"
+    },
+    "executors": {
+      "query": "agents/executor/query.md",
+      "explain": "agents/executor/explain.md",
+      "modify_tag": "agents/executor/modify-tag.md",
+      "modify_rung": "agents/executor/modify-rung.md",
+      "modify_file": "agents/executor/modify-file.md",
+      "generate": "agents/executor/generate.md",
+      "debug": "agents/executor/debug.md",
+      "clarify": "agents/executor/clarify.md",
+      "ide_action": "agents/executor/ide-action.md",
+      "analyze": "agents/executor/analyze.md",
+      "refactor": "agents/executor/refactor.md"
+    }
+  },
+  "knowledge": {
+    "instructions": "instructions/index.json",
+    "fuzzyMap": "instructions/fuzzy-map.json",
+    "dataTypes": "data-types/index.json",
+    "autoInclude": ["standards/naming.md"]
+  }
+}

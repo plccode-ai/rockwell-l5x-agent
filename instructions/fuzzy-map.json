@@ -1,0 +1,136 @@
+{
+  "description": "Maps natural language phrases to PLC instructions with confidence scores. Score 1.0 = perfect match, 0.5-0.8 = ambiguous/partial, multiple matches = phrase could mean different instructions.",
+  "entries": {
+    "timer on delay": [{ "instruction": "TON", "score": 1.0 }],
+    "timer off delay": [{ "instruction": "TOF", "score": 1.0 }],
+    "retentive timer": [{ "instruction": "RTO", "score": 1.0 }],
+    "on delay timer": [{ "instruction": "TON", "score": 1.0 }],
+    "off delay timer": [{ "instruction": "TOF", "score": 1.0 }],
+    "delay on": [{ "instruction": "TON", "score": 0.9 }],
+    "delay off": [{ "instruction": "TOF", "score": 0.9 }],
+    "timer": [
+      { "instruction": "TON", "score": 0.5 },
+      { "instruction": "TOF", "score": 0.5 },
+      { "instruction": "RTO", "score": 0.4 }
+    ],
+    "delay": [
+      { "instruction": "TON", "score": 0.4 },
+      { "instruction": "TOF", "score": 0.4 }
+    ],
+
+    "examine if closed": [{ "instruction": "XIC", "score": 1.0 }],
+    "examine if open": [{ "instruction": "XIO", "score": 1.0 }],
+    "examine on": [{ "instruction": "XIC", "score": 1.0 }],
+    "examine off": [{ "instruction": "XIO", "score": 1.0 }],
+    "examine closed": [{ "instruction": "XIC", "score": 0.9 }],
+    "examine open": [{ "instruction": "XIO", "score": 0.9 }],
+    "normally open contact": [{ "instruction": "XIC", "score": 1.0 }],
+    "normally closed contact": [{ "instruction": "XIO", "score": 1.0 }],
+    "n.o. contact": [{ "instruction": "XIC", "score": 1.0 }],
+    "n.c. contact": [{ "instruction": "XIO", "score": 1.0 }],
+    "contact": [
+      { "instruction": "XIC", "score": 0.5 },
+      { "instruction": "XIO", "score": 0.5 }
+    ],
+    "examine": [
+      { "instruction": "XIC", "score": 0.4 },
+      { "instruction": "XIO", "score": 0.4 }
+    ],
+
+    "output energize": [{ "instruction": "OTE", "score": 1.0 }],
+    "output latch": [{ "instruction": "OTL", "score": 1.0 }],
+    "output unlatch": [{ "instruction": "OTU", "score": 1.0 }],
+    "energize output": [{ "instruction": "OTE", "score": 1.0 }],
+    "latch output": [{ "instruction": "OTL", "score": 1.0 }],
+    "unlatch output": [{ "instruction": "OTU", "score": 1.0 }],
+    "turn on": [{ "instruction": "OTE", "score": 0.8 }],
+    "turn off": [{ "instruction": "OTE", "score": 0.7 }],
+    "set output": [{ "instruction": "OTL", "score": 0.8 }],
+    "reset output": [{ "instruction": "OTU", "score": 0.8 }],
+    "coil": [
+      { "instruction": "OTE", "score": 0.5 },
+      { "instruction": "OTL", "score": 0.4 },
+      { "instruction": "OTU", "score": 0.4 }
+    ],
+    "output": [
+      { "instruction": "OTE", "score": 0.4 },
+      { "instruction": "OTL", "score": 0.3 },
+      { "instruction": "OTU", "score": 0.3 }
+    ],
+
+    "count up": [{ "instruction": "CTU", "score": 1.0 }],
+    "count down": [{ "instruction": "CTD", "score": 1.0 }],
+    "up counter": [{ "instruction": "CTU", "score": 1.0 }],
+    "down counter": [{ "instruction": "CTD", "score": 1.0 }],
+    "increment counter": [{ "instruction": "CTU", "score": 0.9 }],
+    "decrement counter": [{ "instruction": "CTD", "score": 0.9 }],
+    "reset counter": [{ "instruction": "RES", "score": 0.8 }],
+    "counter": [
+      { "instruction": "CTU", "score": 0.6 },
+      { "instruction": "CTD", "score": 0.6 }
+    ],
+    "count": [
+      { "instruction": "CTU", "score": 0.5 },
+      { "instruction": "CTD", "score": 0.5 }
+    ],
+
+    "add": [{ "instruction": "ADD", "score": 0.8 }],
+    "addition": [{ "instruction": "ADD", "score": 0.9 }],
+    "subtract": [{ "instruction": "SUB", "score": 0.9 }],
+    "subtraction": [{ "instruction": "SUB", "score": 0.9 }],
+    "multiply": [{ "instruction": "MUL", "score": 0.9 }],
+    "multiplication": [{ "instruction": "MUL", "score": 0.9 }],
+    "divide": [{ "instruction": "DIV", "score": 0.9 }],
+    "division": [{ "instruction": "DIV", "score": 0.9 }],
+    "modulo": [{ "instruction": "MOD", "score": 1.0 }],
+    "remainder": [{ "instruction": "MOD", "score": 0.9 }],
+    "negate": [{ "instruction": "NEG", "score": 1.0 }],
+    "absolute value": [{ "instruction": "ABS", "score": 1.0 }],
+    "square": [{ "instruction": "SQR", "score": 0.9 }],
+    "square root": [{ "instruction": "SQRT", "score": 1.0 }],
+
+    "equal": [{ "instruction": "EQU", "score": 0.7 }],
+    "equals": [{ "instruction": "EQU", "score": 0.7 }],
+    "not equal": [{ "instruction": "NEQ", "score": 0.9 }],
+    "not equals": [{ "instruction": "NEQ", "score": 0.9 }],
+    "greater than": [{ "instruction": "GRT", "score": 0.9 }],
+    "greater or equal": [{ "instruction": "GEQ", "score": 1.0 }],
+    "less than": [{ "instruction": "LES", "score": 0.9 }],
+    "less or equal": [{ "instruction": "LEQ", "score": 1.0 }],
+    "compare": [{ "instruction": "CMP", "score": 0.8 }],
+    "comparison": [{ "instruction": "CMP", "score": 0.8 }],
+
+    "move": [{ "instruction": "MOV", "score": 0.9 }],
+    "transfer": [{ "instruction": "MOV", "score": 0.8 }],
+    "copy": [{ "instruction": "COP", "score": 0.8 }],
+    "fill": [{ "instruction": "FLL", "score": 0.8 }],
+
+    "jump": [{ "instruction": "JMP", "score": 0.9 }],
+    "label": [{ "instruction": "LBL", "score": 0.9 }],
+    "jump to subroutine": [{ "instruction": "JSR", "score": 1.0 }],
+    "call subroutine": [{ "instruction": "JSR", "score": 1.0 }],
+    "return": [{ "instruction": "RET", "score": 0.8 }],
+    "subroutine": [{ "instruction": "JSR", "score": 0.7 }],
+
+    "one shot": [{ "instruction": "ONS", "score": 1.0 }],
+    "one shot rising": [{ "instruction": "OSR", "score": 1.0 }],
+    "one shot falling": [{ "instruction": "OSF", "score": 1.0 }],
+    "trigger once": [{ "instruction": "ONS", "score": 0.8 }],
+    "pulse": [{ "instruction": "ONS", "score": 0.6 }],
+
+    "and": [{ "instruction": "AND", "score": 0.6 }],
+    "logical and": [{ "instruction": "AND", "score": 0.9 }],
+    "or": [{ "instruction": "OR", "score": 0.6 }],
+    "logical or": [{ "instruction": "OR", "score": 0.9 }],
+    "xor": [{ "instruction": "XOR", "score": 1.0 }],
+    "exclusive or": [{ "instruction": "XOR", "score": 1.0 }],
+    "not": [{ "instruction": "NOT", "score": 0.6 }],
+    "logical not": [{ "instruction": "NOT", "score": 0.9 }],
+
+    "always false": [{ "instruction": "AFI", "score": 1.0 }],
+    "no operation": [{ "instruction": "NOP", "score": 1.0 }],
+    "pid": [{ "instruction": "PID", "score": 1.0 }],
+    "pid control": [{ "instruction": "PID", "score": 1.0 }],
+    "message": [{ "instruction": "MSG", "score": 0.8 }]
+  }
+}
