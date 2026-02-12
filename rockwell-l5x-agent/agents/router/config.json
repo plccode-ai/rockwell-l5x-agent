@@ -1,0 +1,23 @@
+{
+  "intentToAgent": {
+    "query": "reviewer",
+    "explain": "reviewer",
+    "modify_tag": "executor",
+    "modify_rung": "executor",
+    "modify_file": "executor",
+    "generate": "planner",
+    "debug": "reviewer",
+    "clarify": "clarifier",
+    "ide_action": "executor",
+    "analyze": "reviewer",
+    "refactor": "planner"
+  },
+  "confidenceThresholds": {
+    "high": 0.85,
+    "medium": 0.6,
+    "low": 0.4
+  },
+  "complexIntents": ["generate", "refactor", "modify_rung"],
+  "askModeAllowed": ["query", "explain", "clarify", "ide_action", "analyze"],
+  "askModeBlocked": ["modify_tag", "modify_rung", "modify_file", "generate", "refactor"]
+}
